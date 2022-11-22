@@ -1,0 +1,11 @@
+
+<a class="facebook" href="#" onclick="
+			    window.open(
+			      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+			      'facebook-share-dialog',
+			      'width=626,height=436');
+			    return false;"><span class="socialMedia facebook"></span></a>
+
+<a href="https://twitter.com/intent/tweet?text={{page.title}} via @eaternity {{ site.domain_name }}{{ page.url }} &#35;Eaternity" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=626,width=436');return false;"><span class="socialMedia twitter"></span></a>
+
+<a href="https://plus.google.com/share?url={{ site.domain_name }}{{ page.url }}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="socialMedia google"></span></a>

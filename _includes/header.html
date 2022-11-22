@@ -1,0 +1,258 @@
+
+
+<style>
+
+  html[lang=en] #link-de, html[lang=en] #link-fr, html[lang=en] #link-it, html[lang=en] #link-es {
+      display:none;
+  }
+  html[lang=de] #link-en, html[lang=de] #link-fr, html[lang=de] #link-it, html[lang=de] #link-es {
+      display:none;
+  }
+  html[lang=fr] #link-en, html[lang=fr] #link-de, html[lang=fr] #link-it, html[lang=fr] #link-es {
+      display:none;
+  }
+  html[lang=it] #link-en, html[lang=it] #link-de, html[lang=it] #link-fr, html[lang=it] #link-es {
+      display:none;
+  }
+  html[lang=es] #link-en, html[lang=es] #link-de, html[lang=es] #link-fr, html[lang=es] #link-it {
+      display:none;
+  }
+
+
+  a.tooltip-small {
+    position: relative;
+  }
+  a.tooltip-small:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 65px;
+    left: -80%;
+    background: #ffffff;
+    padding: 10px 15px;
+    color: black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    border-radius        : 10px;
+    white-space: nowrap;
+    opacity: 0;
+     /* At time of this creation, only Fx4 doing pseduo transitions */
+    -webkit-transition: all 0.4s ease;
+    -moz-transition   : all 0.4s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    -webkit-box-shadow: rgba(52, 52, 96, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px, rgba(0, 0, 0, 0.024) 0px -12px 36px -8px;
+    box-shadow: rgba(52, 52, 96, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px, rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  }
+  a.tooltip-small:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #ffffff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    /* At time of this creation, only Fx4 doing pseduo transitions */
+    -webkit-transition: all 0.4s ease;
+    -moz-transition   : all 0.4s ease;
+    opacity: 0;
+    left: 40%;
+    top: 55px;
+  }
+  a.tooltip-small:hover:after {
+    top: 55px;
+  }
+  a.tooltip-small:hover:before {
+    top: 45px;
+  }
+  a.tooltip-small:hover:after, a:hover:before {
+    opacity: 1;
+  }
+</style>
+
+
+<div id="header" class="bgDarkBlue">
+  <div class="container">
+    <div class="header">
+      <div class="col-xs-12">
+        <div class="collapse navbar-collapse">
+          <ul class="navigation">
+            <li class="dropdown" id="main-nav-1">
+              <a class="hidden-xs tooltip-small" id="link-en" href="/foodprint" data-tooltip="Why we need to act. Now.">Food & Planet</a>
+              <a class="hidden-xs tooltip-small" id="link-de" href="/foodprint" data-tooltip="Warum wir handeln müssen. Jetzt.">Food & Planet</a>
+              <a class="hidden-xs tooltip-small" id="link-fr" href="/foodprint" data-tooltip="Pourquoi nous devons agir. Maintenant.">Food & Planet</a>
+              <a class="hidden-xs tooltip-small" id="link-it" href="/foodprint" data-tooltip="Perché dobbiamo agire. Ora.">Food & Planet</a>
+              <a class="hidden-xs tooltip-small" id="link-es" href="/foodprint" data-tooltip="Por qué tenemos que actuar. Ahora.">Food & Planet</a>
+              <a
+                class="dropdown-toggle visible-xs"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                href="/foodprint"
+                >Food & Planet</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="/foodprint">Saving the Planet</a></li>
+                <li><a href="/meals">Climate-friendly Foods</a></li>
+                <!--
+                  <li><a href="/meals/restaurants">Eaternity-Restaurants</a></li>
+                -->
+                <li><a href="/meals/workshop">Chefs Workshop</a></li>
+                <li><a href="/meals/hub">Community Hub</a></li>
+              </ul>
+            </li>
+            <li id="main-nav-2">
+              <a class="hidden-xs tooltip-small" id="link-en" href="/foodprint/database" data-tooltip="Eaternity Database – research of environmental impacts.">Science</a>
+              <a class="hidden-xs tooltip-small" id="link-de" href="/foodprint/database" data-tooltip="Eaternity Datenbank – Erforschung von Umweltauswirkungen.">Science</a>
+              <a class="hidden-xs tooltip-small" id="link-fr" href="/foodprint/database" data-tooltip="Base de données Eaternity (EDB) - Recherche sur l'impact environnemental.">Science</a>
+              <a class="hidden-xs tooltip-small" id="link-it" href="/foodprint/database" data-tooltip="Eaternity Database - ricerca degli impatti ambientali.">Science</a>
+              <a class="hidden-xs tooltip-small" id="link-es" href="/foodprint/database" data-tooltip="Base de datos Eaternity - investigación de impactos ambientales.">Science</a>
+              <a
+                class="dropdown-toggle visible-xs"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                href="/meals"
+                >Science</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="/foodprint/climate-score">Climate Score</a></li>
+                <li><a href="/foodprint/vita-score">Health Score</a></li>
+                <li>
+                  <a href="/foodprint/environmental-footprints"
+                    >Environmental Footprints</a
+                  >
+                </li>
+                <li>
+                  <a href="/foodprint/database">Eaternity Database (EDB)</a>
+                </li>
+              </ul>
+            </li>
+            <li id="main-nav-3">
+              <a class="hidden-xs tooltip-small" href="/app"  id="link-en" data-tooltip="Eaternity Gastro – assessments for restaurants and caterer.">Restaurants</a>
+              <a class="hidden-xs tooltip-small" href="/app"  id="link-de" data-tooltip="Eaternity Gastro – Bewertungen für Restaurants und Caterer.">Restaurants</a>
+              <a class="hidden-xs tooltip-small" href="/app"  id="link-fr" data-tooltip="Eaternity Gastro - Évaluations pour les restaurants et les traiteurs.">Restaurants</a>
+              <a class="hidden-xs tooltip-small" href="/app"  id="link-it" data-tooltip="Eaternity Gastro - valutazioni per ristoranti e catering.">Restaurants</a>
+              <a class="hidden-xs tooltip-small" href="/app"  id="link-es" data-tooltip="Eaternity Gastro - evaluaciones para restaurantes y catering.">Restaurants</a>
+              <a
+                class="dropdown-toggle visible-xs"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                href="/app"
+                >Restaurants</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="/app">Eaternity Gastro</a></li>
+                <li><a href="/app/clients">Clients</a></li>
+                <li><a href="/app/partners">Partners</a></li>
+                <li><a href="/app/at-a-glance">Pricing</a></li>
+                <!-- <li><a href="/app/get-the-app">Sign up</a></li> -->
+              </ul>
+            </li>
+            <li id="main-nav-4">
+              <a class="hidden-xs tooltip-small" href="/score" id="link-en" data-tooltip="Eaternity Score - assessments for food-producers and retail.">Food Products</a>
+              <a class="hidden-xs tooltip-small" href="/score" id="link-de" data-tooltip="Eaternity Score - Bewertungen für Lebensmittelproduzenten und Einzelhandel.">Food Products</a>
+              <a class="hidden-xs tooltip-small" href="/score" id="link-fr" data-tooltip="Eaternity Score - Évaluations pour les producteurs de denrées alimentaires et les détaillants.">Food Products</a>
+              <a class="hidden-xs tooltip-small" href="/score" id="link-it" data-tooltip="Eaternity Score - valutazioni per i produttori alimentari e la vendita al dettaglio.">Food Products</a>
+              <a class="hidden-xs tooltip-small" href="/score" id="link-es" data-tooltip="Eaternity Score - evaluaciones para productores de alimentos y minoristas.">Food Products</a>
+              <a
+                class="dropdown-toggle visible-xs"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                href="/score"
+                >Food Products</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="/score">Eaternity Score</a></li>
+                <li><a href="/score/clients">Clients</a></li>
+                <li><a href="/score/partners">Partners</a></li>
+                <li><a href="/score/pricing">Pricing</a></li>
+                <!-- <li><a href="/app/get-the-app">Sign up</a></li> -->
+              </ul>
+            </li>
+            <li id="main-nav-5" style="margin-left:150px;">
+              <a class="hidden-xs" href="/about">About us</a>
+              <a
+                class="dropdown-toggle visible-xs"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                href="/about"
+                >About us</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="/about">Idea &amp; Vision</a></li>
+                <li><a href="/about/partners">Partners</a></li>
+                <li><a href="/about/media">Media</a></li>
+              </ul>
+            </li>
+            <li class="hidden-xs" style="margin-left:20px;">
+              <a href="{{ site.eaternity_discuss }}">FAQ</a>
+            </li>
+            <li class="visible-xs">
+              <a href="{{ site.eaternity_discuss }}">FAQ</a>
+            </li>
+            <!--
+              <li class="hidden-xs" style="margin-left:20px;margin-right:-50px;">
+                <form action="/app/get-the-app"><button type="submit" class="small-push-bottom"><img src="/img/ganz-weiss.svg" width="22px" type="image/svg+xml" style="margin-bottom:-4px;margin-right:4px;width:22px"/> CO₂ Calculator</i></button></form>
+
+              </li>
+              <li class="visible-xs">
+                <form action="/app/get-the-app"><button type="submit" class="small-push-bottom"><img src="/img/ganz-weiss.svg" width="22px" type="image/svg+xml" style="margin-bottom:-4px;margin-right:4px;width:22px"/> CO₂ Calculator</i></button></form>
+
+              </li>
+            -->
+          </ul>
+        </div>
+
+        <div class="visible-xs logo">
+          <a href="/">
+            <img
+              class="responsive"
+              alt="Eaternity Logo"
+              src="/img/home/Eaternity-logo-white-outline-small.png"
+            />
+          </a>
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div
+          class="hidden-xs logo"
+          style="margin-left:-35px; margin-right:-30px;"
+        >
+          <a href="/">
+            <img
+              class=""
+              alt="Eaternity Logo"
+              src="/img/home/Eaternity-logo-white-outline-small.png"
+            />
+          </a>
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
