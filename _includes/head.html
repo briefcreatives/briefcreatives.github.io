@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
   <title>
-    {{page.name}}
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
   </title>
   <meta name="description" content="{{ site.description }}" />
 
@@ -40,7 +40,7 @@
 
     gtag('config', 'G-Z45XYGG5DQ');
   </script>
-  {% if page.name == "restaurantes.html" %}
+  {% if page.name == "index.html" %}
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
