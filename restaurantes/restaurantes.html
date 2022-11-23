@@ -182,7 +182,7 @@ permalink: /restaurantes.html
             </div>
           </div>
         </div>
-        <a data-w-id="981463e6-d3da-fea8-d612-d6b1c03276b8" href="#" class="link-block w-inline-block">
+        <a data-w-id="981463e6-d3da-fea8-d612-d6b1c03276b8" href="#" class="link-block w-inline-block open-form">
           <div class="text-block-3">Start Saving Now</div>
         </a>
       </div>
@@ -433,7 +433,7 @@ permalink: /restaurantes.html
             <div order="7" index="7" class="swiper-item">
               <div class="si-center">
                 <div class="text-block-39">Would you like to suggest<br>a new feature?</div>
-                <a href="#" class="link-block-3 w-inline-block">
+                <a href="#" class="link-block-3 w-inline-block open-form">
                   <div class="text-block-40">Talk with us</div>
                 </a>
               </div>
@@ -638,7 +638,7 @@ permalink: /restaurantes.html
           <div class="div-block-10"></div>
           <div class="text-block-9">Improve your menu planning Results</div>
           <div class="h1">Start working with us now.</div>
-          <a data-w-id="3c2c6789-f4dc-2362-c054-4321f6674d93" href="#" class="link-block-2 w-inline-block">
+          <a data-w-id="3c2c6789-f4dc-2362-c054-4321f6674d93" href="#" class="link-block-2 w-inline-block open-form">
             <div class="text-block-10">Contact Us</div>
           </a>
         </div>
@@ -676,8 +676,7 @@ permalink: /restaurantes.html
       let closeForm = function () {
         document.querySelector('.form').style.display = 'none';
       }
-      document.querySelector('.link-block').addEventListener('click', openForm, false);
-      document.querySelector('.link-block-2').addEventListener('click', openForm, false);
+      document.querySelector('.open-form').addEventListener('click', openForm, false);
       document.querySelector('.close-form').addEventListener('click', closeForm, false);
     </script>
   </div>
