@@ -701,6 +701,8 @@
   width: 100%;
   max-width: none;
   opacity: 1;
+  -webkit-transition: opacity 425ms ease-in-out;
+  transition: opacity 425ms ease-in-out;
 }
 
 .os-text-1 {
@@ -1586,13 +1588,12 @@
   top: 0%;
   right: 0%;
   bottom: 0%;
-  z-index: 2;
+  z-index: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 120px;
-  padding-left: 120px;
+  padding: 100px 120px;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -2567,6 +2568,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 40px;
 }
 
 .right-arrow {
@@ -2578,7 +2580,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 94px;
+  width: 40px;
+  margin-left: 50px;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -3033,7 +3036,15 @@
   }
 
   .ai-n-n-matrix {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 20px;
+    padding-left: 20px;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
 
   .matrix-line {
@@ -3818,6 +3829,13 @@
   .text-block-17 {
     font-size: 18px;
     line-height: 27px;
+  }
+
+  .ai-n-n-matrix {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .ai-n-n-content {

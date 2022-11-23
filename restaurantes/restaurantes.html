@@ -102,15 +102,39 @@ permalink: /restaurantes.html
             class="calc-value euros">5</span> € per kg of food purchase</div>
         <div class="w-embed w-script">
           <script>
+            let vegetableToggle = function () {
+              if (document.querySelector('.vegetable').style.opacity == '')
+                document.querySelector('.vegetable').style.opacity = 0;
+              else if (document.querySelector('.vegetable').style.opacity == 1)
+                document.querySelector('.vegetable').style.opacity = 0;
+              else if (document.querySelector('.vegetable').style.opacity == 0)
+                document.querySelector('.vegetable').style.opacity = 1;
+            }
+
+            document.querySelector('.left-arrow .circle-btn').addEventListener('click', vegetableToggle, false);
+            document.querySelector('.right-arrow .circle-btn').addEventListener('click', vegetableToggle, false);
+
+
             let calculator = function () {
               let menus = document.querySelector('.menus');
               let weeks = document.querySelector('.weeks');
               let euros = document.querySelector('.euros');
+
+              if (menus.innerHTML.length > 3 || menus.innerHTML.match(/[^0-9]/g))
+                menus.innerHTML = menus.innerHTML.replace(/[^0-9]/g, '').substr(0, 3);
+              if (weeks.innerHTML.length > 3 || weeks.innerHTML.match(/[^0-9]/g))
+                weeks.innerHTML = weeks.innerHTML.replace(/[^0-9]/g, '').substr(0, 3);
+              if (euros.innerHTML.length > 3 || euros.innerHTML.match(/[^0-9]/g))
+                euros.innerHTML = euros.innerHTML.replace(/[^0-9]/g, '').substr(0, 3);
+
               let fixedPart = parseInt(menus.innerHTML) * parseInt(weeks.innerHTML) * 0.2 * 0.45 * 5;
               let eurosSave = Math.round(fixedPart * parseInt(euros.innerHTML));
               let co2 = Math.round(fixedPart * 2487.8766);
               let water = Math.round(fixedPart * 58.497684);
               let width = document.documentElement.clientWidth
+              eurosSave = isNaN(eurosSave) ? 0 : eurosSave;
+              co2 = isNaN(co2) ? 0 : eurosSave;
+              water = isNaN(water) ? 0 : eurosSave;
               if (width < 793) {
                 let milhao = 1000000;
                 let mil = 1000;
@@ -140,6 +164,7 @@ permalink: /restaurantes.html
               document.querySelector('.co2').innerHTML = co2.toLocaleString('pt-BR');
               document.querySelector('.water').innerHTML = water.toLocaleString('pt-BR');
             };
+
             let inputs = document.querySelectorAll('.calc-value');
             inputs[0].addEventListener("input", calculator, false);
             inputs[1].addEventListener("input", calculator, false);
@@ -150,6 +175,8 @@ permalink: /restaurantes.html
             window.onload = function () {
               calculator();
             }
+
+
           </script>
         </div>
         <div class="div-block-34">
