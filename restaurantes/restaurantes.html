@@ -703,8 +703,12 @@ permalink: /restaurantes.html
       let closeForm = function () {
         document.querySelector('.form').style.display = 'none';
       }
-      document.querySelector('.open-form').addEventListener('click', openForm, false);
-      document.querySelector('.close-form').addEventListener('click', closeForm, false);
+      document.querySelectorAll('.open-form').forEach(el => {
+        el.addEventListener('click', openForm, false);
+      });
+      document.querySelectorAll('.close-form').forEach(el => {
+        el.addEventListener('click', closeForm, false);
+      });
     </script>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63725d3a20f9713b2663dee5"
