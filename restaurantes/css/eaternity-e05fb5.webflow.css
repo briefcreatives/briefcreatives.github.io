@@ -3941,6 +3941,7 @@
 
   .slider {
     width: 100%;
+    height: 270px;
   }
 
   .slide {
@@ -4034,4 +4035,3 @@
   -ms-grid-row-span: 1;
   grid-row-end: span 1;
 }
-
