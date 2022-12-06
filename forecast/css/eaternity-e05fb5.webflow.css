@@ -141,6 +141,7 @@
   width: 100%;
   height: 100vh;
   min-height: 700px;
+  padding-bottom: 120px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -158,7 +159,7 @@
 
 .container-dishes {
   position: absolute;
-  top: 68%;
+  top: 62%;
   bottom: auto;
   z-index: 10;
   display: -webkit-box;
@@ -230,6 +231,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 790px;
+  padding-bottom: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2857,6 +2859,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto auto auto;
   grid-template-rows: auto auto auto;
+}
+
+.div-block-42 {
+  width: 100vw;
+  height: 120px;
+  background-color: #aa0b0b;
 }
 
 @media screen and (max-width: 991px) {
