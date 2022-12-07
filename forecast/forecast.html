@@ -205,7 +205,7 @@ permalink: /forecast.html
             </div>
           </div>
         </div>
-        <a href="#" class="link-block w-inline-block">
+        <a href="#" class="link-block open-form w-inline-block">
           <div class="text-block-3">Start Saving Now</div>
         </a>
       </div>
@@ -614,7 +614,7 @@ permalink: /forecast.html
           <div class="div-block-10"></div>
           <div class="text-block-9">Improve your menu planning Results</div>
           <div class="h1">Start working with us now.</div>
-          <a href="#" class="link-block-2 w-inline-block">
+          <a href="#" class="link-block-2 open-form w-inline-block">
             <div class="text-block-10">Contact Us</div>
           </a>
         </div>
@@ -651,17 +651,37 @@ permalink: /forecast.html
       let closeForm = function () {
         document.querySelector('.form').style.display = 'none';
       }
-      document.querySelector('.link-block').addEventListener('click', openForm, false);
-      document.querySelector('.open-form').addEventListener('click', openForm, false);
+      document.querySelectorAll('.open-form').forEach((el) => {
+        el.addEventListener('click', openForm, false);
+      })
+
+      // document.querySelector('.link-block').addEventListener('click', openForm, false);
       document.querySelector('.close-form').addEventListener('click', closeForm, false);
     </script>
     <style>
       .bgBlue {
         background-color: #094922;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: "Source Sans Pro", sans-serif;
+        line-height: 26px;
       }
 
       .bgDarkBlue {
         background-color: #083118;
+        font-weight: 300;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      .bgBlue button {
+        border: 2px solid #46cc00;
+      }
+
+      .bgDarkBlue ul {
+        margin: 0;
+        padding: 0;
       }
 
       .swiper {
@@ -760,13 +780,11 @@ permalink: /forecast.html
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
   <script src="forecast/js/webflow.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".swiper", {
       slidesPerView: "auto",
       spaceBetween: 30,
-      loop: true,
       navigation: {
         nextEl: ".btn-next",
         prevEl: ".btn-prev",
