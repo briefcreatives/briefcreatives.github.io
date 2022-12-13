@@ -14,7 +14,11 @@
   <link rel="stylesheet" href="{{ " /css/style.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 
+  {% if page.name == "forecast.html" %}
+  <link rel="shortcut icon" href="/forecast/images/favicon.ico" />
+  {% else %}
   <link rel="shortcut icon" href="/img/favicon.ico" />
+  {% endif %}
   <link rel="alternate" type="application/rss+xml" title="Eaternity Blog" href="/rss.xml" />
 
   <link rel="stylesheet" type="text/css" href="/css/slick.css" />
